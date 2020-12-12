@@ -1,0 +1,166 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>데이터시각</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript">
+		      $(document).ready(function(){
+		         $("#hea").load("html/매장수bar.html")
+						 $("#hea2").load("html/거주인구bar.html")
+						 $("#prac2").load("html/연습2.html")
+						 $("#출퇴").load("html/출퇴근.html")
+						 $("#비율").load("html/비율.html")
+		        /* id 지정을 통해서도 가능합니다.
+		         $("#header").load("header.html #navbar")
+		         */
+		      });
+		</script>
+	</head>
+	<body class="landing is-preload">
+		<div id="page-wrapper">
+
+				<section id="banner">
+					<h2  style="font-style:italic;">Data visualization</h2>
+
+					<p  style="font-style:italic  ;">by Younjiei</p>
+				</section>
+
+			<!-- Main -->
+				<section id="main" class="container">
+
+					<section class="box special">
+						<header class="major">
+							<h3 style='font-weight:500;'>페점률 0%대 ‘상권불패‘ 파리바게뜨 </h3>
+							<h3 style='font-weight:500;'> 입점 위치 기준은?</h3>
+							<p>가설1: 거주인구가 많은 곳에 위치할 것이다.</p>
+						</header>
+						<br>
+						<h4 style="margin-left:60px"> 가설2: 퇴근시간 인구가 많은 곳에 위치할 것이다. </h4>
+						<br>
+						<h4 style="margin-right:42px">가설3: 횡단보도 가까이 위치할 것이다. </h4>
+					</section>
+		</div>
+
+		<h3 style='text-align:center; font-weight:500;'>분석1) 거주인구가 많은 곳에 위치할까?</h3>
+
+		<div style="width:200px; height:150px;float:left;margin-left:270px;margin-top:40px">
+				<img src="images/파리바게뜨매장분포.PNG"  >
+				<a href="https://younjiei.github.io/L4/%ED%8C%8C%EB%A6%AC%EB%B0%94%EA%B2%8C%EB%9C%A8%EB%A7%A4%EC%9E%A5%EC%88%98.html">파리바게뜨 매장 맵link</a>
+		</div>
+		<div style="width:200px; height:150px; float:left;margin-left:500px;margin-top:40px">
+				<img src="images/거주인구수분포.PNG" >
+				<a href="https://younjiei.github.io/L4/%EC%9D%B8%EA%B5%AC%EC%88%98/%EC%A3%BC%EB%AF%BC%EB%93%B1%EB%A1%9D%EC%9D%B8%EA%B5%AC%EC%88%98.html">거주인구 link</a>
+		</div><div style="clear:both:"></div>
+
+		<h4 style='text-align:center;margin-top:650px'>2019년 거주인구와 파리바게뜨 매장수의 구별 분포 패턴은 다르게 보입니다.</h4>
+		<h4 style='text-align:center;'>거주인구가 매장수와 연관성이 있는지 회기분석을 해보았습니다.</h4>
+		<br>
+		<h4 style='text-align:center;'>매장수와 거주인구 회기분석을 해본 결과</h4>
+		<p style="text-align: center;">
+		   	<img src="images/회기.png" style='width:650px;height:500px'>
+		</p>
+		<h4 style='text-align:center;'>많은 구들이 신뢰구간을 벗어나는 것을 볼 수 있습니다.</h4>
+		<h4 style='text-align:center;'>즉, 파리바게뜨의 입점기준은 거주인구로 설명하기 어렵습니다.</h4>
+
+		<div id="hea" style="width:600px; height:500px;float:left;margin-left:400px;">
+		</div>
+		<div id='hea2' style="width:600px; height:500px; float:left">
+		</div><div style="clear:both:"></div>
+
+		<h3 style='text-align:center;margin-top:550px; font-weight:600;'>결론:"입점 위치 기준은 거주인구수" 가설은 사실이 아니다.</h3>
+
+
+
+		<h3 style='text-align:center; font-weight:500;margin-top:200px;'>분석2) 퇴근시간 인구가 많은 곳에 위치할까?</h3>
+		<h4 style='text-align:center;'>퇴근시간 인구의 분포를 보기 위해 2019년 1월 15일(화요일) 생활인구 데이터를 사용하였습니다.</h4>
+		<h5 style='text-align:center;'>*생활인구-조사 시점에 개인이 위치한 지역을 기반으로 집계</h5>
+		<a href="https://data.seoul.go.kr/dataList/OA-15439/S/1/datasetView.do" ><p style='text-align:center;'>생활인구 데이터link</p></a>
+
+		<h4 style='text-align:center;margin-top:100px;'>00시~23시까지 구별 생활인구수를 보면 강남,서초,송파구는 모든 시간대에 생활인구 수가 많습니다.</h4>
+		<h4 style='text-align:center'>또한, 출퇴근 시점에 변동이 많은 것을 볼 수 있습니다.</h4>
+		<div id="prac2" style="width:800px; height:600px;margin-left:570px">
+		</div>
+
+
+
+		<h4 style='text-align:center;margin-top:50px;'>산봉우리 모양은 오피스타운과 가깝고 오목한 모양은 베드타운에 가깝다고 해석할 수 있습니다.</h4>
+		<h4 style='text-align:center;'>17시부터 시작해 생활인구수의 큰 변화가 보입니다. 그러므로 가설검증에서 퇴근시간은 17시부터 시작으로 설정하였습니다.</h4>
+		<div id="출퇴" style="width:950px; height:600px;margin-left:490px;margin-top:30px;">
+		</div>
+
+		<h4 style='text-align:center;margin-top:600px;'>17시에는 오피스타운이 많은 서울 중심부에 생활인구가 많이 분포 되어있고, </h4>
+		<h4 style='text-align:center;'>18시에는 베드타운이 많은 서울 외곽에 생활인구가 많이 분포되어 있습니다.</h4>
+		<div style="width:200px; height:150px;float:left;margin-left:270px;margin-top:70px">
+				<img src="images/17시.PNG"  >
+				<a href="https://younjiei.github.io/-web/17%EC%8B%9C.html">17시 맵link</a>
+		</div>
+		<div style="width:200px; height:150px; float:left;margin-left:500px;margin-top:70px">
+				<img src="images/18시.PNG" >
+				<a href="https://younjiei.github.io/-web/18%EC%8B%9C.html">18시 맵link</a>
+		</div><div style="clear:both:"></div>
+
+		<img style='margin-top:470px;margin-left:600px;'src="images/파리바게뜨매장분포.PNG" >
+		<h4 style='text-align:center;margin-top:30px;'>17시,18시 생활인구 분포가 높은 구와 파리바게뜨 매장수 분포가 높은 구는 대체로 겹치지만</h4>
+		<h4 style='text-align:center;'>17시,18시 생활인구수는 파리바게뜨 매장수 분포에서 동대문,성동구의 높은 분포를 설명하지 못합니다. </h4>
+		<h4 style='text-align:center;'>또한, 구로,마포구의 낮은 분포를 설명하지 못합니다.</h4>
+		<h3 style='text-align:center;margin-top:550px; font-weight:600;margin-top:70px;'>결론: 퇴근 인구수는 입지조건 중 하나일 수 있으나 퇴근 인구수만으로 입지 기준을 세우는 건 아니다.</h3>
+
+
+		<h3 style='text-align:center; font-weight:500;margin-top:200px;'>분석3) 횡단보도 가까이 위치할까?</h3>
+		<h4 style='text-align:center;'>사람들 사이에서 이슈화된 이야기가 있습니다.</h4>
+		<h3 style='text-align:center; font-weight:500'>"횡단보도 근처에 파리바게뜨가 있다"</h3>
+		<a href="https://m.post.naver.com/viewer/postView.nhn?volumeNo=16910561&memberNo=34976611" ><p style='text-align:center;color:black;font-size:13px;'>관련 블로그 글link</p></a>
+			<a href="https://m.post.naver.com/viewer/postView.nhn?volumeNo=16910561&memberNo=34976611" ><p style='text-align:center;color:black;font-size:13px;'>관련 기사link</p></a>
+		<a href="https://www.data.go.kr/data/15047252/fileData.do" ><p style='text-align:center;'>횡단보도 데이터link</p></a>
+
+
+		<h4 style='text-align:center;'>서울에 위치한 728개 파리바게뜨 매장 중 횡단보도 100m 반경내에 있는 매장 파란색, 없는 매장을 빨간색으로 나타내었습니다.</h4>
+		<h4 style='text-align:center;color:green'>그 결과 728개 중 686개의 매장이 횡단보도 반경 100m 내에 있었습니다(94.2%)</h4>
+		<h4 style='text-align:center;'>즉, 파리바게뜨는 횡단보도 근처에 위치한다는 가설은 약 94%확률로 사실이 됩니다.</h4>
+		<p style="text-align: center;">
+		   	<img src="images/100파리.PNG" style='width:650px;height:500px;margin-top:70px;'>
+		</p>
+		<a href="https://younjiei.github.io/L4/%ED%9A%A1%EB%8B%A8%EB%B3%B4%EB%8F%84/%ED%8C%8C%EB%A6%AC%EB%B0%94%EA%B2%8C%ED%8A%B8100.html" ><p style='text-align:center;'>파리바게뜨 맵link</p></a>
+
+		<h4 style='text-align:center;'>이러한 사실이 파리바게뜨만 그런지 다른 유사 프랜차이즈 업체 살펴보았습니다.</h4>
+		<div style="width:400px; height:200px;float:left;margin-left:180px;margin-top:40px">
+			  <p>뚜레쥬르 100m반경 내 횡단보도 </p>
+				<img src="images/뚜레.PNG"  >
+				<p>결과: 서울시에 있는 242개 뚜레쥬르 매장 중 100m반경 내 횡단보도가 있는 매장은 222개로 나왔다.<a href="https://younjiei.github.io/L4/%ED%8C%8C%EB%A6%AC%EB%B0%94%EA%B2%8C%EB%9C%A8%EB%A7%A4%EC%9E%A5%EC%88%98.html">뚜레쥬르 맵link</a></p>
+
+		</div>
+		<div style="width:400px; height:200px;float:left;margin-left:180px;margin-top:40px">
+				<p>스타벅스 100m반경 내 횡단보도 </p>
+				<img src="images/스타벅스.PNG"  >
+				<p>결과: 서울시에 있는 485개 스타벅스 매장 중 100m반경 내 횡단보도가 있는 매장은 465개로 나왔다.<a href="https://younjiei.github.io/L4/%ED%8C%8C%EB%A6%AC%EB%B0%94%EA%B2%8C%EB%9C%A8%EB%A7%A4%EC%9E%A5%EC%88%98.html">스타벅스 맵link</a></p>
+		</div>
+		<div style="width:400px; height:200px; float:left;margin-left:180px;margin-top:40px">
+				<p>이디야 100m반경 내 횡단보도 </p>
+				<img src="images/이디야.PNG" >
+				<p>결과: 서울시에 있는 649개 이디야 매장 중 100m반경 내 횡단보도가 있는 매장은 600개로 나왔다. <a href="https://younjiei.github.io/L4/%EC%9D%B8%EA%B5%AC%EC%88%98/%EC%A3%BC%EB%AF%BC%EB%93%B1%EB%A1%9D%EC%9D%B8%EA%B5%AC%EC%88%98.html">이디야 맵 link</a> </p>
+		</div><div style="clear:both:"></div>
+
+		<h4 style='text-align:center;margin-top:700px; font-weight:650'>반경을 80,50m로 좁혀가며 비교해보았습니다.</h4>
+
+
+		<div id="비율" style="width:800px; height:500px;margin-left:540px;margin-top:60px">
+		</div>
+		<h4 style='text-align:center;margin-top:20px'>반경이 작아졌을 때 파리바게뜨의 매장 수 비율이 다른 업체에 비해 높은 것을 알 수 있습니다.</h4>
+		<h4 style='text-align:center;'>즉, 이디야, 스타벅스, 뚜레쥬르, 파리바게뜨 모두 횡단보도 근처에 많은 비율로 위치하지만,</h4>
+		<h4 style='text-align:center;'>특히 파리바게뜨는 횡단보도와 더욱 가깝게 위치합니다.</h4>
+		<h3 style='text-align:center;margin-top:550px; font-weight:600;margin-top:70px;'>결론: 횡단보도 근처에 위치한다는 가설은 사실이다.</h3>
+
+
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.dropotron.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+	</body>
+
+</html>
